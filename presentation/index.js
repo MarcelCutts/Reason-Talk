@@ -44,7 +44,8 @@ const images = {
   reasonTooling: require("../assets/reasontools.png"),
   refmt: require("../assets/refmt.gif"),
   betterErrors: require("../assets/bettererrors.png"),
-  elm: require("../assets/elm.png")
+  elm: require("../assets/elm.png"),
+  lair: require("../assets/lair.jpg")
 };
 
 preloader(images);
@@ -298,9 +299,9 @@ export default class Presentation extends React.Component {
         </Slide>
 
 
-        <Slide transition={["slide"]} bgColor="#2d2d2d">
+        <Slide transition={["slide"]} bgColor="#2d2d2d" className="interop">
           <CodePane
-            lang="reason"
+            lang="javascript"
             source={require("raw-loader!../assets/interop.example")}
           />
         </Slide>
@@ -328,6 +329,8 @@ export default class Presentation extends React.Component {
             - Systems community
           </Heading>
         </Slide>
+
+        <Slide transition={["slide"]} bgImage={images.lair} />
 
         <Slide transition={["slide"]} bgColor="primary">
           <Image src={images.elm} height="100%"/>
